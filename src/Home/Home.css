@@ -1,0 +1,49 @@
+.home-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+    font-size: 30px;
+    color: white;
+    
+}
+
+.girls-links {
+    margin: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: azure;
+    text-shadow: 1px 1px rgb(70, 32, 241);
+
+
+}
+
+.girls-links img {
+    width: 250px;
+    height: 250px ;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: azure;
+    text-shadow: 1px 1px rgb(70, 32, 241);
+}
+
+.text {
+    text-align: center;
+    font-size: 30px;
+    color: azure;
+    margin: 35px;
+    text-shadow: 1px 1px rgb(70, 32, 241);
+}
+
+.video {
+    text-align:center; 
+}
+
+.video_settings {
+    width: 1120px;
+    height: 630px; 
+}
