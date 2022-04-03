@@ -5,20 +5,34 @@
     background-color: black;
     opacity: 0.5;
     overflow: hidden;
-    padding:5px;
-    color: rgb(130, 97, 248);
+    padding:2px;
     font-size: 36px;
-   
-    
 
 }
 
 .nav-links {
     text-decoration: none;
-    color: rgb(130, 97, 248);
+    color: rgb(200, 189, 241);
+    width: 300px;
 
 }
 
-/* .position {
-    position: fixed;
-} */
+.nav-links:hover {
+    color: rgb(239, 237, 243);
+
+}
+
+.nav-left {
+    text-align: left;
+
+}
+
+.nav-center {
+    text-align: center;
+
+}
+
+.nav-right {
+    text-align: right;
+
+}

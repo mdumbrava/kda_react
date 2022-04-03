@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c34dca04.chunk.css",
+    "main.js": "/static/js/main.0fbd7c4c.chunk.js",
+    "main.js.map": "/static/js/main.0fbd7c4c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.de2ce6ea.js",
+    "runtime-main.js.map": "/static/js/runtime-main.de2ce6ea.js.map",
+    "static/js/2.55f190b0.chunk.js": "/static/js/2.55f190b0.chunk.js",
+    "static/js/2.55f190b0.chunk.js.map": "/static/js/2.55f190b0.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.c34dca04.chunk.css.map": "/static/css/main.c34dca04.chunk.css.map",
+    "static/js/2.55f190b0.chunk.js.LICENSE.txt": "/static/js/2.55f190b0.chunk.js.LICENSE.txt",
+    "static/media/Ahri.db49d9f2.jpg": "/static/media/Ahri.db49d9f2.jpg",
+    "static/media/Akali.ef528cd9.jpg": "/static/media/Akali.ef528cd9.jpg",
+    "static/media/Evelynn.c74c403f.jpg": "/static/media/Evelynn.c74c403f.jpg",
+    "static/media/Kaisa.c16a8df7.jpg": "/static/media/Kaisa.c16a8df7.jpg",
+    "static/media/Seraphine.968499aa.jpg": "/static/media/Seraphine.968499aa.jpg",
+    "static/media/index.css": "/static/media/baddest.d51bf796.png",
+    "static/media/icon_ahri.444dfbc6.jpg": "/static/media/icon_ahri.444dfbc6.jpg",
+    "static/media/icon_akali.5fdb4dd2.jpg": "/static/media/icon_akali.5fdb4dd2.jpg",
+    "static/media/icon_evelyn.41d2c3b8.jpg": "/static/media/icon_evelyn.41d2c3b8.jpg",
+    "static/media/icon_kaisa.f9f25f4f.jpg": "/static/media/icon_kaisa.f9f25f4f.jpg",
+    "static/media/icon_s.f2bd8f29.jpg": "/static/media/icon_s.f2bd8f29.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de2ce6ea.js",
+    "static/js/2.55f190b0.chunk.js",
+    "static/css/main.c34dca04.chunk.css",
+    "static/js/main.0fbd7c4c.chunk.js"
+  ]
+}

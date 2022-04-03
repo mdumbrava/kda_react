@@ -5,8 +5,9 @@ import Evelynn from "../images/icon_evelyn.jpg";
 import Kaisa from "../images/icon_kaisa.jpg";
 import Seraphine from "../images/icon_s.jpg";
 import { Link } from "react-router-dom";
+// import ScriptTag from 'react-script-tag';
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div>
       <div className="home-links">
@@ -73,6 +74,7 @@ const Home = () => {
         <br />
       </div>
     </div>
+    
   );
 };
 
