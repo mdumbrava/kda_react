@@ -3,11 +3,10 @@
 // const Fetch = () => {
 //     return (
 //         async componentDidMount() {
-//             const url = "https://api.randomuser.me/";
+//             const url = "/api";
 //             const response = await fetch(url);
 //             const data = await response.json();
 //             this.setState({ person: data.results[0], loading: false });
 
-  
-//   export default Fetch;
-  
+//     )}
+// export default Fetch;
