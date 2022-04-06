@@ -5,18 +5,16 @@ const Comments = () => {
   const [title, setTitle] = useState(null);
   // fetch API
   const callBackendAPI = async () => {
-    // const response = await fetch("http://localhost:9000/api");
     let response = await fetch("/api");
-    let body = await response.text();
-    // console.log("Showing API:");
+    let body = await response.json();
     setTitle(body);
-    console.log(body);
+    console.log(body.comments);
   };
 
   // console.log(callBackendAPI());
   callBackendAPI();
 
-  return <div className="comments">{title}</div>;
+  return <div className="comments">hi</div>;
 };
 
 export default Comments;
