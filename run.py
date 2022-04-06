@@ -13,7 +13,7 @@ def index():
 
 @app.route('/api')
 def hello():
-    return 'Hello!!!'
+    return '{"comments": [{"dude1": "Dude1 comment"}, {"dude2": "Dude2 comment"}]}'
 
 if __name__ == '__main__':
    app.run(host = IP , port = PORT , debug = DEBUG)
