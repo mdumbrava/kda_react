@@ -6,11 +6,18 @@ const Nav = () => {
     <div>
       <div>
         <div className="nav">
-          <Link className="nav-links nav-left"   to="/"   ><div>Home          </div></Link>
-          <Link className="nav-links nav-center" to="/api"><div>Welcome to KDA</div></Link>
-          <Link className="nav-links nav-right"  to="/"   ><div>User/Login    </div></Link>
+          <Link className="nav-links nav-left" to="/">
+            <div>Home </div>
+          </Link>
+          <Link className="nav-links nav-center" to="/api">
+            <div>Welcome to KDA</div>
+          </Link>
+          <Link className="nav-links nav-right" to="/">
+            <div></div>
+          </Link>
         </div>
-        <br /><br />
+        <br />
+        <br />
       </div>
     </div>
   );

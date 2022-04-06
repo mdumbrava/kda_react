@@ -30,13 +30,6 @@ const Kaisa = () => {
       <br />
       <br />
       <div className="video">
-        <iframe
-          className="video_settings"
-          title="myFrame"
-          src="https://www.youtube.com/embed/E_PbH5y70Tc"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>{" "}
         <br />
         <br />
       </div>

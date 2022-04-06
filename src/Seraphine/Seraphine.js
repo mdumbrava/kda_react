@@ -23,7 +23,8 @@ const Seraphine = () => {
           trying to hold on to her unique voice, keep up with Kai'Sa's
           intimidatingly sharp choreography, and still somehow manage to get
           enough sleep.
-          <br /><br />
+          <br />
+          <br />
           After her whirlwind rise to stardom, Seraphine is on top of the world,
           and the charts, with her feature on K/DA's new EP. Her music and her
           message are resonating with her fans, and she's excited to show them
@@ -33,13 +34,6 @@ const Seraphine = () => {
       <br />
       <br />
       <div className="video">
-        <iframe
-          className="video_settings"
-          title="myFrame"
-          src="https://www.youtube.com/embed/wkFGt-66oeY"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>{" "}
         <br />
         <br />
       </div>

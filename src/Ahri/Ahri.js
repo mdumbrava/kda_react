@@ -18,19 +18,18 @@ const Ahri = () => {
           shake up her image and reinvent herself as an unstoppable force within
           the music industry. Five years later, she has returned with a sleek
           new look and a killer sound—and this time she's not alone for
-          Popstars. <br /><br />
+          Popstars. <br />
+          <br />
           When Ahri returns onto the stage to perform with K/DA their new song,
           she knows she's surrounded by the best of the best—different girls
           with different personalities, all at the top of their craft. As their
           leader and as their friend, Ahri is poised to guide these divas to
           even greater heights and leave their audiences breathless for more.
         </p>
-      </div><br /><br />
-      <div className="video">
-        <iframe className="video_settings" title="myFrame" src="https://www.youtube.com/embed/WW1BpABbzHs" 
-         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe> <br /><br />
-    </div>
+      </div>
+      <br />
+      <br />
+      <div className="video"></div>
     </div>
   );
 };

@@ -27,13 +27,6 @@ const Akali = () => {
       <br />
       <br />
       <div className="video">
-        <iframe
-          className="video_settings"
-          title="myFrame"
-          src="https://www.youtube.com/embed/RkID8_gnTxw"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>{" "}
         <br />
         <br />
       </div>

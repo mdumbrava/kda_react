@@ -5,6 +5,7 @@ import Evelynn from "../images/icon_evelyn.jpg";
 import Kaisa from "../images/icon_kaisa.jpg";
 import Seraphine from "../images/icon_s.jpg";
 import { Link } from "react-router-dom";
+import Comments from "../comments/comments";
 // import ScriptTag from 'react-script-tag';
 
 const Home = (props) => {
@@ -63,18 +64,11 @@ const Home = (props) => {
       <br />
       <br />
       <div className="video">
-        <iframe
-          className="video_settings"
-          title="myFrame"
-          src="https://www.youtube.com/embed/3VTkBuxU4yk"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>{" "}
         <br />
         <br />
       </div>
+      <Comments />
     </div>
-    
   );
 };
 
