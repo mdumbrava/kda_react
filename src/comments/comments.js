@@ -1,5 +1,7 @@
 import "./comments.css";
 import React, { useState } from "react";
+import Form from "./form";
+import UserComments from "./userComments";
 
 const Comments = () => {
   const [title, setTitle] = useState(null);
@@ -14,9 +16,14 @@ const Comments = () => {
   // console.log(callBackendAPI());
   callBackendAPI();
 
-  return <div className="comments">
-    Hello, i am miha
-  </div>;
+  return (
+    <div>
+      <Form />
+      <UserComments />
+      <UserComments />
+      <UserComments />
+    </div>
+  );
 };
 
 export default Comments;
