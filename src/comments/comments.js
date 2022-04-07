@@ -14,7 +14,9 @@ const Comments = () => {
   // console.log(callBackendAPI());
   callBackendAPI();
 
-  return <div className="comments">hi</div>;
+  return <div className="comments">
+    Hello, i am miha
+  </div>;
 };
 
 export default Comments;
