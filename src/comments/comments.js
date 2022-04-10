@@ -28,6 +28,7 @@ const Comments = () => {
 
   useEffect(() => {
     callBackendAPI();
+    setInterval(callBackendAPI, 60000);
   }, []);
 
   return (
