@@ -5,7 +5,7 @@ import UserComments from "./userComments";
 
 const Comments = () => {
   const [comments, setComments] = useState([
-    { id: "1", name: "Error Getting Comments", Comment: "Try Again Later" },
+    { id: "1", name: "Loading...", Comment: "" },
   ]);
 
   // fetch API
