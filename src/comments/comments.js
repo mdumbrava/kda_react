@@ -7,12 +7,13 @@ const Comments = () => {
   const [comments, setComments] = useState("");
   const [comment, setComment] = useState(comments[0]);
   // fetch API
+
   const callBackendAPI = async () => {
     let response = await fetch("/api");
     let body = await response.json();
-    setComments(body);
-    // console.log(body.comments);
-    console.log(comments);
+    const data = body.comments;
+
+    console.log(data);
   };
 
   useEffect(() => {
@@ -30,7 +31,6 @@ const Comments = () => {
       <UserComments />
       <UserComments />
       <UserComments />
-      <div>{comment}</div>
     </div>
   );
 };
