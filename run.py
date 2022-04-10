@@ -1,5 +1,6 @@
-from cfg   import *
-from flask import Flask
+import json, time
+from   cfg   import *
+from   flask import Flask
 
 app = Flask(
             __name__, 
@@ -11,9 +12,10 @@ app = Flask(
 def index():
     return app.send_static_file('index.html')
 
-@app.route('/api')
-def hello():
-    return '{"comments": [{"dude1": "Dude1 comment"}, {"dude2": "Dude2 comment"}]}'
+@app.route('/get_commts')
+def get_commts():
+    time.sleep(1)
+    return json.dumps(DATA)
 
 if __name__ == '__main__':
    app.run(host = IP , port = PORT , debug = DEBUG)

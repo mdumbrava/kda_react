@@ -4,33 +4,40 @@ import Form from "./form";
 import UserComments from "./userComments";
 
 const Comments = () => {
-  const [comments, setComments] = useState("");
-  const [comment, setComment] = useState(comments[0]);
+  const [comments, setComments] = useState([
+    { id: "1", name: "Error Getting Comments", Comment: "Try Again Later" },
+  ]);
+
   // fetch API
 
   const callBackendAPI = async () => {
-    let response = await fetch("/api");
+    let response = await fetch("/get_commts");
     let body = await response.json();
-    const data = body.comments;
-
-    console.log(data);
+    setComments(body);
+    // console.log(body);
   };
 
-  useEffect(() => {
-    console.log("Before Fetch");
-    callBackendAPI();
-    console.log("After Fetch");
-  }, []);
+  // function callBackendAPI() {
+  //   fetch("/get_commts")
+  //     .then((response) => response.json())
+  //     .then((cmtsList) => {
+  //       setComments(cmtsList);
+  //       // console.log(cmtsList);
+  //     });
+  // }
 
-  // console.log(callBackendAPI());
-  // callBackendAPI();
+  useEffect(() => {
+    callBackendAPI();
+  }, []);
 
   return (
     <div>
       <Form />
-      <UserComments />
-      <UserComments />
-      <UserComments />
+      <div>
+        {comments.map((cmts) => (
+          <UserComments comment={cmts} key={cmts.id} />
+        ))}
+      </div>
     </div>
   );
 };
