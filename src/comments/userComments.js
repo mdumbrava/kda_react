@@ -1,16 +1,11 @@
 import "./userComments.css";
 
-const UserComments = () => {
+const UserComments = ({ comment, id }) => {
   return (
     <div>
       <div className="comments">
-        <h3>User1</h3>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, aut
-          minus rem quasi corrupti modi tempore aliquam molestiae deserunt
-          sapiente laboriosam dolorem magni odit obcaecati facere delectus
-          laborum! Quaerat, illo.
-        </p>
+        <h3 key={id}>{comment.name}</h3>
+        <p key={id}>{comment.Comment}</p>
       </div>
     </div>
   );

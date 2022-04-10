@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Nav from "./Nav/Nav";
 import Home from "./Home/Home";
 import Ahri from "./Ahri/Ahri";
@@ -14,7 +14,6 @@ function App() {
     <Router>
       <div>
         <Nav />
-
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/ahri" component={Ahri} />
@@ -22,19 +21,10 @@ function App() {
           <Route path="/evelynn" component={Evelynn} />
           <Route path="/kaisa" component={Kaisa} />
           <Route path="/seraphine" component={Seraphine} />
-          {/* <Route path="*"                component={Error}    /> */}
         </Switch>
       </div>
     </Router>
   );
 }
-
-const Error = () => {
-  return (
-    <div>
-      <div className="title">Error</div>
-    </div>
-  );
-};
 
 export default App;
