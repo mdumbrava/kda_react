@@ -6,19 +6,19 @@ const Form = () => {
       <div className="title">Comments</div> <br />
       <br />
       <div className="form">
-        <form action="">
+        <form action="/save_commts" method="POST">
           <label>First Name:</label> <br />
-          <input className="nameInput" placeholder="Your name.." />
+          <input className="nameInput" placeholder="Your name.." required name="name"/>
           <br />
           <label>Comment:</label> <br />
           <textarea
-            rows="6"
-            cols="123"
-            className="commentInput"
-            placeholder="Your comment.."
-          />
+            rows="6" 
+            cols="123" 
+            className="commentInput" 
+            placeholder="Your comment.." 
+            required  name="comment"/>
           <br />
-          <input type="button" className="submitComment" value="Submit" />
+          <input type="submit" className="submitComment" value="Submit" />
           <br />
         </form>
       </div>
