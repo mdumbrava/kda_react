@@ -1,4 +1,4 @@
-import json, time
+import json, time, math
 from   cfg   import *
 from   flask import Flask, redirect, request, render_template, url_for
 
@@ -19,19 +19,27 @@ def index():
 
 @app.route('/get_commts/<page>')
 def get_commts(page):
-    page_size = 2
+    page_size = 3
     print(page)
     f = open('./comments.txt', 'r')
     val_DATA = f.read()
     f.close
     lst_DATA = json.loads(val_DATA)
     lst_DATA.reverse()
+    val_pages = len(lst_DATA) / page_size
+    val_pages = math.ceil(val_pages)
+    print(val_pages)
     lst_NEW = []
-    if page_size >= len(lst_DATA):
+    if page_size >= len(lst_DATA) or int(page) > val_pages:
+        # set cookie to page 1 or 2
         lst_NEW = lst_DATA
     else:
-        for x in range(0, page_size):
-            lst_NEW.append(lst_DATA[x])
+        # set cookie to page page or page + 1
+        val_start = page_size*(int(page)-1)
+        val_stop  = val_start + page_size
+        lst_NEW = lst_DATA[val_start:val_stop]
+        # for x in range(0, page_size):
+        #     lst_NEW.append(lst_DATA[x])
     return json.dumps(lst_NEW)
 
 @app.route('/save_commts', methods=['POST'])

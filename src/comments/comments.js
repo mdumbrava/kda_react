@@ -42,7 +42,15 @@ const Comments = () => {
           callBackendAPI(1);
         }}
       >
-        Page
+        Page1
+      </button>
+      <button
+        className="submitComment"
+        onClick={() => {
+          callBackendAPI(2);
+        }}
+      >
+        Page2
       </button>
       <div>
         {comments.map((cmts) => (
