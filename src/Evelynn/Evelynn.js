@@ -1,5 +1,6 @@
 import "../Css/Girlspages.css";
 import Evelynn_img from "../images/Evelynn.jpg";
+import EvelynnPhotos from "./EvelynnPhotos";
 
 const Evelynn = () => {
   return (
@@ -26,11 +27,7 @@ const Evelynn = () => {
         </p>
       </div>
       <br />
-      <br />
-      <div className="video">
-        <br />
-        <br />
-      </div>
+      <EvelynnPhotos />
     </div>
   );
 };

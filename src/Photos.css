@@ -1,0 +1,16 @@
+.galleryImg {
+    width: 27%;
+    height: 25%;
+    z-index: 2;
+    padding: 12px
+}
+
+.gallery {
+    text-align: center;
+  margin: auto;
+  font-size: 40px;
+  color: azure;
+  text-shadow: 1px 1px rgb(70, 32, 241);
+
+}
+

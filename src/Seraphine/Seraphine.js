@@ -1,5 +1,6 @@
 import "../Css/Girlspages.css";
 import Seraphine_img from "../images/Seraphine.jpg";
+import SeraphinePhotos from "./SeraphinePhotos";
 
 const Seraphine = () => {
   return (
@@ -32,11 +33,7 @@ const Seraphine = () => {
         </p>
       </div>
       <br />
-      <br />
-      <div className="video">
-        <br />
-        <br />
-      </div>
+      <SeraphinePhotos />
     </div>
   );
 };

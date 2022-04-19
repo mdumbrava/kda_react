@@ -1,5 +1,6 @@
 import "../Css/Girlspages.css";
 import Kaisa_img from "../images/Kaisa.jpg";
+import KaisaPhotos from "./KaisaPhotos";
 
 const Kaisa = () => {
   return (
@@ -28,11 +29,7 @@ const Kaisa = () => {
         </p>
       </div>
       <br />
-      <br />
-      <div className="video">
-        <br />
-        <br />
-      </div>
+      <KaisaPhotos />
     </div>
   );
 };

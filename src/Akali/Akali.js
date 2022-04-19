@@ -1,5 +1,6 @@
 import "../Css/Girlspages.css";
 import Akali_img from "../images/Akali.jpg";
+import AkaliPhotos from "./AkaliPhotos";
 
 const Akali = () => {
   return (
@@ -25,11 +26,7 @@ const Akali = () => {
         </p>
       </div>
       <br />
-      <br />
-      <div className="video">
-        <br />
-        <br />
-      </div>
+      <AkaliPhotos />
     </div>
   );
 };

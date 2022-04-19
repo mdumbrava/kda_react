@@ -1,5 +1,7 @@
+import { useState } from "react";
 import "../Css/Girlspages.css";
 import Ahri_img from "../images/Ahri.jpg";
+import AhriPhotos from "./AhriPhotos";
 
 const Ahri = () => {
   return (
@@ -28,8 +30,7 @@ const Ahri = () => {
         </p>
       </div>
       <br />
-      <br />
-      <div className="video"></div>
+      <AhriPhotos />
     </div>
   );
 };
