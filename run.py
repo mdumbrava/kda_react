@@ -17,15 +17,22 @@ app.config['ENV'] = 'development'
 def index():
     return app.send_static_file('index.html')
 
-@app.route('/get_commts')
-def get_commts():
+@app.route('/get_commts/<page>')
+def get_commts(page):
+    page_size = 2
+    print(page)
     f = open('./comments.txt', 'r')
     val_DATA = f.read()
     f.close
     lst_DATA = json.loads(val_DATA)
     lst_DATA.reverse()
-    # time.sleep(1)
-    return json.dumps(lst_DATA)
+    lst_NEW = []
+    if page_size >= len(lst_DATA):
+        lst_NEW = lst_DATA
+    else:
+        for x in range(0, page_size):
+            lst_NEW.append(lst_DATA[x])
+    return json.dumps(lst_NEW)
 
 @app.route('/save_commts', methods=['POST'])
 def save_commts():
