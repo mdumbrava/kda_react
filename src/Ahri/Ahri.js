@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../Css/Girlspages.css";
 import Ahri_img from "../images/Ahri.jpg";
 import AhriPhotos from "./AhriPhotos";

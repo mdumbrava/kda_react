@@ -9,21 +9,25 @@ const Comments = () => {
     { id: "1", name: "Loading...", Comment: "" },
   ]);
 
+  const [page, setPage] = useState(1);
   // fetch API
 
   const callBackendAPI = async (param) => {
     // console.log(param);
     let response = await fetch("/get_commts/" + param);
     let body = await response.json();
-    setComments(body);
-    // console.log(body);
+    setComments(body.comments);
+    setPage(body.page);
+    // console.log(body.page);
+    // console.log(body.comments);
   };
 
-  // function callBackendAPI() {
-  //   fetch("/get_commts")
+  // function callBackendAPI(param) {
+  //   fetch("/get_commts/" + param)
   //     .then((response) => response.json())
   //     .then((cmtsList) => {
-  //       setComments(cmtsList);
+  //       setComments(cmtsList.comments);
+  //       setPage(cmtsList.page);
   //       // console.log(cmtsList);
   //     });
   // }
@@ -36,27 +40,20 @@ const Comments = () => {
   return (
     <div>
       <Form />
-      <button
-        className="submitComment"
-        onClick={() => {
-          callBackendAPI(1);
-        }}
-      >
-        Page1
-      </button>
-      <button
-        className="submitComment"
-        onClick={() => {
-          callBackendAPI(2);
-        }}
-      >
-        Page2
-      </button>
+
       <div>
         {comments.map((cmts) => (
           <UserComments comment={cmts} key={cmts.id} />
         ))}
       </div>
+      <button
+        className="submitComment"
+        onClick={() => {
+          callBackendAPI(parseInt(page) + 1);
+        }}
+      >
+        Next Page
+      </button>
     </div>
   );
 };
