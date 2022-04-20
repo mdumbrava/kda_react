@@ -29,4 +29,4 @@ function logger(req, res, next) {
 }
 
 
-app.listen(9000, () => console.log('Server is running on PORT: 9000'));
+app.listen(7000, () => console.log('Server is running on PORT: 7000'));

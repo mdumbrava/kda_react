@@ -1,6 +1,7 @@
 {
   "name": "react-the-complete-guide",
   "proxy": "http://localhost:9000",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

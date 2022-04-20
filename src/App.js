@@ -7,7 +7,7 @@ import Evelynn from "./Evelynn/Evelynn";
 import Kaisa from "./Kaisa/Kaisa";
 import Seraphine from "./Seraphine/Seraphine";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect  } from "react-router-dom";
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route path="/evelynn" component={Evelynn} />
           <Route path="/kaisa" component={Kaisa} />
           <Route path="/seraphine" component={Seraphine} />
+          <Redirect from="*" to="/" />
         </Switch>
       </div>
     </Router>

@@ -1,6 +1,7 @@
-import json, time, math
-from   cfg   import *
-from   flask import Flask, redirect, request, render_template, url_for
+import json, time, math, logging
+from   cfg       import *
+from   flask     import Flask, redirect, request, render_template, url_for
+from   datetime  import datetime
 
 app = Flask(
             __name__, 
@@ -8,14 +9,32 @@ app = Flask(
             static_url_path = STATIC_PATH, 
             )
 
+if not LOG_FLASK:
+    log = logging.getLogger('werkzeug')
+    log.disabled = True
+
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-app.config['ENV'] = 'development'
+app.config['ENV'] = MODE
+
 # for x in app.config:
 #     print(str(x) + '\t' + str(app.config[x]))
 
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
+    # return redirect('/index.html')
+
+# @app.route('/favicon.ico')
+# def favicon():
+#     return app.send_static_file('favicon.ico')
+
+# @app.route('/baddest.png')
+# def baddest():
+#     return app.send_static_file('baddest.png')
+
+# @app.route('/<all>')
+# def cactch_all(all):
+#     return app.send_static_file('index.html')
 
 @app.route('/get_commts/<page>')
 def get_commts(page):
@@ -55,8 +74,23 @@ def save_commts():
     f = open('./comments.txt', 'w')
     f.write(json.dumps(lst_DATA))
     f.close
-    # return redirect('http://127.0.0.1:3000')
     return redirect('/')
+
+def log_console(ip, time, path):
+    print(  '' + ip + '\t' + time + '\t' + '' + path)
+
+if NICE_LOG:
+    @app.after_request
+    def after_request_func(response):
+        val_ip   = request.environ.get('REMOTE_ADDR')
+        val_path = request.path
+        val_time = str(datetime.now())[:19]
+        if HIDE_STATIC:
+            if 'static' not in request.path:
+                log_console(val_ip, val_time, val_path)
+        else:
+            log_console(val_ip, val_time, val_path)
+        return response
 
 if __name__ == '__main__':
    app.run(host = IP , port = PORT , debug = DEBUG)
