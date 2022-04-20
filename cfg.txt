@@ -11,3 +11,5 @@ STATIC_PATH   = '/'
 NICE_LOG      = False
 HIDE_STATIC   = True
 LOG_FLASK     = True
+PAGE_SIZE     = 2
+COMM_FILE     = './comments.txt'
