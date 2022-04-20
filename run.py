@@ -20,21 +20,13 @@ app.config['ENV'] = MODE
 #     print(str(x) + '\t' + str(app.config[x]))
 
 @app.route('/')
+@app.route('/ahri')
+@app.route('/akali')
+@app.route('/evelynn')
+@app.route('/kaisa')
+@app.route('/seraphine')
 def index():
     return app.send_static_file('index.html')
-    # return redirect('/index.html')
-
-# @app.route('/favicon.ico')
-# def favicon():
-#     return app.send_static_file('favicon.ico')
-
-# @app.route('/baddest.png')
-# def baddest():
-#     return app.send_static_file('baddest.png')
-
-# @app.route('/<all>')
-# def cactch_all(all):
-#     return app.send_static_file('index.html')
 
 @app.route('/get_commts/<page>')
 def get_commts(page):
