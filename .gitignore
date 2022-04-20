@@ -4,3 +4,4 @@ __pycache__
 run.bat
 build
 comments.txt
+cfg.py
