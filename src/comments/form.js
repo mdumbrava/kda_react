@@ -6,7 +6,7 @@ const Form = () => {
       <div className="title">Comments</div> <br />
       <br />
       <div className="form">
-        <form action="/save_commts" method="POST">
+        <form action="/apikda/save_commts" method="POST">
           <label>First Name:</label> <br />
           <input className="nameInput" placeholder="Your name.." required name="name"/>
           <br />

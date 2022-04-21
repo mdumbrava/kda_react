@@ -14,7 +14,7 @@ const Comments = () => {
 
   const callBackendAPI = async (param) => {
     // console.log(param);
-    let response = await fetch("/get_commts/" + param);
+    let response = await fetch("/apikda/get_commts/" + param);
     let body = await response.json();
     setComments(body.comments);
     setPage(body.page);
@@ -23,7 +23,7 @@ const Comments = () => {
   };
 
   // function callBackendAPI(param) {
-  //   fetch("/get_commts/" + param)
+  //   fetch("/apikda/get_commts/" + param)
   //     .then((response) => response.json())
   //     .then((cmtsList) => {
   //       setComments(cmtsList.comments);
