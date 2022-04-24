@@ -2,3 +2,23 @@
     color:aliceblue;
 }
 
+.commentsDiv {
+    text-align: center;
+  margin: auto;
+}
+
+.nextPage {
+    margin: auto;
+    text-align: center;
+    width: 11%;
+    background-color: white;
+    color: rgb(167, 108, 245);
+    padding: 12px;
+    margin: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 23px;
+    font-family: "Charm";
+  }
+  

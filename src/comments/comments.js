@@ -38,7 +38,7 @@ const Comments = () => {
   }, []);
 
   return (
-    <div>
+    <div className="commentsDiv">
       <Form />
 
       <div>
@@ -47,7 +47,7 @@ const Comments = () => {
         ))}
       </div>
       <button
-        className="submitComment"
+        className="nextPage"
         onClick={() => {
           callBackendAPI(parseInt(page) + 1);
         }}
